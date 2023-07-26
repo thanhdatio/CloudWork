@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Học tập là vinh quang</title>
+    <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <script src="https://thanhdatio.github.io/CloudWork/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        try {
+          TagCanvas.Start('myCanvas','tags',{
+            textColour: '#FFFF00',
+            outlineColour: '#ff00ff',
+            reverse: true,
+            depth: 0.8,
+            maxSpeed: 0.05
+          });
+        } catch(e) {
+          // something went wrong, hide the canvas container
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
+    <style>
+        body {
+            margin: 0; /* Đảm bảo không có margin hoặc padding khi đặt ảnh nền cho toàn bộ trang */
+            padding: 0;
+        }
+
+        .background-container {
+            background-image: url('https://thanhdatio.github.io/CloudWork/bg.jpg'); /* Đường dẫn tới ảnh nền */
+            background-size: cover; /* Hiển thị ảnh bằng cách căn chỉnh tỷ lệ rộng cao sao cho toàn bộ phần tử div được che phủ */
+            background-position: center; /* Căn chỉnh ảnh nền tại tâm */
+        }
+
+        /* Điều chỉnh các phần tử khác nếu cần thiết để tránh che phủ hoặc ghi đè lên ảnh nền */
+        /* Ví dụ: */
+        .content {
+            padding: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="background-container">
+    <h1>Học tập</h1>
+    <div id="myCanvasContainer" >
+      <center>
+      <canvas id="myCanvas" width="1200px" height="600px" ">
+        <p>Học tập là vinh quang</p>
+      </canvas>
+      </center>
+    </div>
+    <div id="tags">
+      <ul>
+        <li><a href="/CloudWork/" >Thông tin gốc</a></li>
+        <li><a href="/CloudWork/" >Học tiếng Anh</a></li>
+        <li><a href="/CloudWork/" >Nói trước đám đông</a></li>
+        <li><a href="/CloudWork/" >Giọng nói trầm ấm</a></li>
+        <li><a href="/CloudWork/" >Makerting Online</a></li>
+      </ul>
+    </div>
+    </div>
+  </body>
+</html>
