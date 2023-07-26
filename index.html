@@ -8,7 +8,7 @@
       window.onload = function() {
         try {
           TagCanvas.Start('myCanvas','tags',{
-            textColour: '#ff0000',
+            textColour: '#FFFF00',
             outlineColour: '#ff00ff',
             reverse: true,
             depth: 0.8,
@@ -20,8 +20,27 @@
         }
       };
     </script>
+    <style>
+        body {
+            margin: 0; /* Đảm bảo không có margin hoặc padding khi đặt ảnh nền cho toàn bộ trang */
+            padding: 0;
+        }
+
+        .background-container {
+            background-image: url('https://thanhdatio.github.io/CloudWork/bg.jpg'); /* Đường dẫn tới ảnh nền */
+            background-size: cover; /* Hiển thị ảnh bằng cách căn chỉnh tỷ lệ rộng cao sao cho toàn bộ phần tử div được che phủ */
+            background-position: center; /* Căn chỉnh ảnh nền tại tâm */
+        }
+
+        /* Điều chỉnh các phần tử khác nếu cần thiết để tránh che phủ hoặc ghi đè lên ảnh nền */
+        /* Ví dụ: */
+        .content {
+            padding: 20px;
+        }
+    </style>
   </head>
   <body>
+    <div class="background-container">
     <h1>Thông tin gốc</h1>
     <div id="myCanvasContainer" >
       <center>
@@ -42,6 +61,7 @@
         <li><a href="/CloudWork/" >Luyện tinh thần</a></li>
         <li><a href="/CloudWork/" >Học tập</a></li>
       </ul>
+    </div>
     </div>
   </body>
 </html>
