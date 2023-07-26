@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thông tin gốc</title>
+    <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <script src="tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        try {
+          TagCanvas.Start('myCanvas','tags',{
+            textColour: '#FFFF00',
+            outlineColour: '#ff00ff',
+            reverse: true,
+            depth: 0.8,
+            maxSpeed: 0.05
+          });
+        } catch(e) {
+          // something went wrong, hide the canvas container
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
+    <style>
+        body {
+            margin: 0; /* Đảm bảo không có margin hoặc padding khi đặt ảnh nền cho toàn bộ trang */
+            padding: 0;
+        }
+
+        .background-container {
+            background-image: url('https://thanhdatio.github.io/CloudWork/bg.jpg'); /* Đường dẫn tới ảnh nền */
+            background-size: cover; /* Hiển thị ảnh bằng cách căn chỉnh tỷ lệ rộng cao sao cho toàn bộ phần tử div được che phủ */
+            background-position: center; /* Căn chỉnh ảnh nền tại tâm */
+        }
+
+        /* Điều chỉnh các phần tử khác nếu cần thiết để tránh che phủ hoặc ghi đè lên ảnh nền */
+        /* Ví dụ: */
+        .content {
+            padding: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="background-container">
+    <h1>Thông tin gốc</h1>
+    <div id="myCanvasContainer" >
+      <center>
+      <canvas id="myCanvas" width="1200px" height="600px" ">
+        <p>Luyện tinh thần</p>
+      </canvas>
+      </center>
+    </div>
+    <div id="tags">
+      <ul>
+        <li><a href="/CloudWork/" >Thông tin gốc</a></li>
+        <li><a href="/CloudWork/" >Om mani padme hum</a></li>
+        <li><a href="/CloudWork/" >Bạn là vũ trụ nhỏ</a></li>
+        <li><a href="/CloudWork/" >Bạn làm việc của vũ trụ</a></li>
+        <li><a href="/CloudWork/" >Hành động theo vũ trụ</a></li>
+        <li><a href="/CloudWork/" >Bạn được vũ trụ bảo vệ</a></li>
+        <li><a href="/CloudWork/" >Bạn có được năng lượng vũ trụ</a></li>
+        <li><a href="/CloudWork/" >Vũ trụ luôn bên bạn</a></li>
+        <li><a href="/CloudWork/" >Phải thật mạnh mẽ</a></li>
+      </ul>
+    </div>
+    </div>
+  </body>
+</html>
